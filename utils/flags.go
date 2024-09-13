@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func FlagHandler() {
@@ -31,7 +32,7 @@ func header(args []string) {
 
 	fileName := args[2]
 
-	if fileName == "--help" || fileName == "-h" || fileName == "--helps" {
+	if strings.HasPrefix(fileName, "-h") || strings.HasPrefix(fileName, "--h") {
 		fmt.Println("Usage:\n" +
 			"  bitmap header <source_file>\n\n" +
 			"Description:\n" +
