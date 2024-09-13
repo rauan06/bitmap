@@ -39,7 +39,7 @@ func header(args []string) {
 		os.Exit(0)
 	}
 
-	// TODO: file reading
+	ReadFile(fileName)
 }
 
 func printUsageWithExitCode(code int) {
